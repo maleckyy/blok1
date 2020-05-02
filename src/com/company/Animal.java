@@ -3,6 +3,8 @@ package com.company;
 public class Animal {
     String species;
     private Double weight;
+    public String petName;
+
 
     public Animal() {
 
