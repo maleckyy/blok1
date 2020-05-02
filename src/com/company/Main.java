@@ -30,7 +30,5 @@ public class Main {
         myCar.model="v40";
         myCar.producer ="Volvo";
         human1.addCar(myCar);
-
-
     }
 }
