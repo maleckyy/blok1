@@ -1,5 +1,6 @@
 package com.company;
 
+import java.sql.SQLOutput;
 import java.util.Date;
 
 public class Human {
@@ -7,11 +8,10 @@ public class Human {
     public String lName;
     private Double salary;
 
-
     Animal pet;
 
-    Car myCar;
 
+    private Car myCar;
     public Human() {
     }
 
@@ -25,11 +25,8 @@ public class Human {
        date.getTime();
        System.out.println(date+" "+salary);
 
-
-        return salary;
-
+       return salary;
     }
-
 
     public Double setSalary(Double salary) {
         this.salary = salary;
@@ -45,4 +42,22 @@ public class Human {
 
         return salary;
     }
+
+    public Car getMyCar() {
+        return myCar;
+    }
+    public void setMyCar(Car myCar){
+        if (salary> myCar.getValue()){
+            System.out.printf("Kupiłes samochod za gotóweczke");
+            addCar(myCar);
+        }
+        else if(salary *12 > myCar.getValue()){
+            System.out.printf("Kupiłeś samochod ale masz kredyt");
+        }else{
+            System.out.println("zapisz sie na studia ale znajdz lepsza prace");
+        }
+
+    }
+
+
 }
