@@ -1,6 +1,7 @@
 package com.company;
 
-import java.sql.SQLOutput;
+import com.company.devices.Car;
+
 import java.util.Date;
 
 public class Human {
@@ -10,7 +11,10 @@ public class Human {
 
     Animal pet;
 
+    public String toString(){
+        return fName+" "+lName+" "+salary;
 
+    }
     private Car myCar;
     public Human() {
     }

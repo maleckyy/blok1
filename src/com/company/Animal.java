@@ -5,6 +5,11 @@ public class Animal {
     private Double weight;
     public String petName;
 
+    public String toString(){
+
+        return petName+" "+weight;
+
+    }
 
     public Animal() {
 
@@ -27,4 +32,11 @@ public class Animal {
     }
 
 
+    public String getPetName() {
+        return petName;
+    }
+
+    public void setPetName(String petName) {
+        this.petName = petName;
+    }
 }
