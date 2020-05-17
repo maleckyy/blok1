@@ -3,9 +3,19 @@ package com.company.devices;
 import com.company.creatures.Human;
 import com.company.creatures.Salleable;
 
+import java.net.URL;
+import java.util.List;
+
 public class Phone extends Device{
     public String number;
     public String producer;
+
+    public static final String appName="twarzksiega";
+    public static final String appVersion="2.0";
+    public static final String appServerAddress="1000";
+    public List<String> appList;
+    public URL url;
+
 
     public String toString(){
         return producer+" o numerze "+number;

@@ -72,13 +72,23 @@ public class Main {
 
 
 
-        Car myCar = new Car();
+        Car myCar = new Car() {
+            @Override
+            public void refuel() {
+
+            }
+        };
         myCar.setModel("v40");
         myCar.setProducer("Volvo");
         myCar.setValue(12000D);
         human1.addCar(myCar);
 
-        Car newCar = new Car();
+        Car newCar = new Car() {
+            @Override
+            public void refuel() {
+
+            }
+        };
         newCar.setModel("v60");
         newCar.setProducer("Volvo");
         newCar.setValue(18000.50D);
@@ -87,10 +97,16 @@ public class Main {
         System.out.println(equal);//porównanie czy są takie same, są false bo mają rozne wartosci w modelu
 
 
-        Car newCar1 = new Car();
+        Car newCar1 = new Car() {
+            @Override
+            public void refuel() {
+
+            }
+        };
         newCar1.setModel("v60");
         newCar1.setProducer("Volvo");
         newCar1.setValue(18000.50D);
+        newCar1.refuel();
         boolean equal1 = newCar1.getModel().equals(newCar.getModel()) && newCar1.getProducer().equals(newCar.getProducer());
         System.out.println(equal1);//true poniewaz są takie same
 
