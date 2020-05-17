@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 import java.util.Date;
 
@@ -8,8 +9,9 @@ public class Human {
     public String fName;
     public String lName;
     private Double salary;
-
-    Animal pet;
+    private Double cash;
+    private Animal pet;
+    private Phone phone;
 
     public String toString(){
         return fName+" "+lName+" "+salary;
@@ -64,4 +66,27 @@ public class Human {
     }
 
 
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+
+    public Animal getPet() {
+        return pet;
+    }
+
+    public void setPet(Animal pet) {
+        this.pet = pet;
+    }
+
+    public Phone getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Phone phone) {
+        this.phone = phone;
+    }
 }
