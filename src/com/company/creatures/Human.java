@@ -1,5 +1,6 @@
-package com.company;
+package com.company.creatures;
 
+import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -10,7 +11,7 @@ public class Human {
     public String lName;
     private Double salary;
     private Double cash;
-    private Animal pet;
+    public Animal pet;
     private Phone phone;
 
     public String toString(){
@@ -21,7 +22,7 @@ public class Human {
     public Human() {
     }
 
-    void addCar(Car myCar){
+    public void addCar(Car myCar){
         this.myCar=myCar;
     }
 

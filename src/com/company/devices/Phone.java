@@ -1,7 +1,7 @@
 package com.company.devices;
 
-import com.company.Human;
-import com.company.Salleable;
+import com.company.creatures.Human;
+import com.company.creatures.Salleable;
 
 public class Phone extends Device{
     public String number;

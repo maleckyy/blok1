@@ -1,19 +1,33 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Device;
 import com.company.devices.Phone;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
 
-        Animal dog = new Animal();
+        Animal dog = new Animal() {
+            @Override
+            public void feed(Double foodweight) {
+
+            }
+        };
         dog.petName = "pies";
 
 
 
-        Animal animal = new Animal();
+        Animal animal = new Animal() {
+            @Override
+            public void feed(Double foodweight) {
+
+            }
+        };
         animal.petName="kotek";
         animal.feed();
         animal.feed();

@@ -1,6 +1,6 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal {
+public abstract class Animal implements Feedable{
     String species;
     private Double weight;
     public String petName;
@@ -13,16 +13,16 @@ public class Animal {
 
     public Animal() {
 
-        this.species = species;
+        this.species = this.species;
         this.weight = 10.0;
     }
 
 
-    void feed(){
+    public void feed(){
         weight++;
         System.out.println("psinka zjadła i waży"+" "+weight);
     }
-    void takeForAWalk(){
+    public void takeForAWalk(){
         if(weight>1){
             weight--;
             System.out.println("spacer udany i ja psinka waże"+" "+weight);
@@ -40,7 +40,7 @@ public class Animal {
         this.petName = petName;
     }
 
-    Salleable salleable = new Salleable() {
+    public Salleable salleable = new Salleable() {
         @Override
         public void sell(Human seller, Human buyer, Double price) {
             if(buyer.getCash()>=price){
