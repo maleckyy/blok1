@@ -52,11 +52,14 @@ public abstract class Animal implements Feedable{
                     buyer.setPet(seller.getPet());
                     seller.setCash(+price);
                 }
-                if(seller.getMyCar()==null){
+                if(seller.getGarage()==null){
                     System.out.println("nie mam samochodu na sprzedarz");
                 }else {
                     System.out.println("mam samochod na sprzedarz");
-                   ;
+                   seller.getGarage().remove(0);
+                   buyer.getGarage().add(0);
+                    System.out.println("Trakzakcja zakonczoona.");
+
                 }
                 if(seller.getPhone()==null){
                     System.out.println("nie mam telefonu na sprzedarz");

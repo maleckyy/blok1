@@ -1,10 +1,10 @@
 package com.company.creatures;
 
-import com.company.creatures.Animal;
 import com.company.devices.Car;
+import com.company.devices.Device;
 import com.company.devices.Phone;
 
-import java.util.Date;
+import java.util.*;
 
 public class Human {
     public String fName;
@@ -13,17 +13,16 @@ public class Human {
     private Double cash;
     public Animal pet;
     private Phone phone;
+    private Car myCar;
 
     public String toString(){
         return fName+" "+lName+" "+salary;
 
     }
-    private Car myCar;
-    public Human() {
-    }
+    private ArrayList garage=new ArrayList();
 
-    public void addCar(Car myCar){
-        this.myCar=myCar;
+
+    public Human() {
     }
 
 
@@ -50,22 +49,17 @@ public class Human {
         return salary;
     }
 
-    public Car getMyCar() {
-        return myCar;
-    }
-    public void setMyCar(Car myCar){
-        if (salary> myCar.getValue()){
-            System.out.printf("Kupiłes samochod za gotóweczke");
-            addCar(myCar);
-        }
-        else if(salary *12 > myCar.getValue()){
-            System.out.printf("Kupiłeś samochod ale masz kredyt");
-        }else{
-            System.out.println("zapisz sie na studia ale znajdz lepsza prace");
-        }
+    public List addMyCar(Car myCar){
+        getGarage().add(myCar);
+        return getGarage();
 
     }
 
+   public List sort(){
+       Collections.sort(garage);
+
+    return garage;
+   }
 
     public Double getCash() {
         return cash;
@@ -89,5 +83,22 @@ public class Human {
 
     public void setPhone(Phone phone) {
         this.phone = phone;
+    }
+
+
+    public ArrayList getGarage() {
+        return garage;
+    }
+
+    public void setGarage(ArrayList garage) {
+        this.garage = garage;
+    }
+
+    public Car getMyCar() {
+        return myCar;
+    }
+
+    public void setMyCar(Car myCar) {
+        getGarage().add(1,myCar);
     }
 }

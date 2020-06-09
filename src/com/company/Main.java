@@ -45,6 +45,27 @@ public class Main {
         animal.takeForAWalk();
         animal.takeForAWalk();
 
+        Car myCar = new Car() {
+            @Override
+            public void refuel() {
+
+            }
+        };
+        myCar.setModel("v40");
+        myCar.setProducer("Volvo");
+        myCar.setValue(12000D);
+
+
+        Car newCar = new Car() {
+            @Override
+            public void refuel() {
+
+            }
+        };
+        newCar.setModel("v60");
+        newCar.setProducer("Volvo");
+        newCar.setValue(18000.50D);
+
         Phone myphone = new Phone();
         myphone.number = "857798947";
         myphone.producer = "huawei";
@@ -61,6 +82,10 @@ public class Main {
         human1.setPet(animal);
         human1.setPhone(myphone);
         human1.setCash(900.0);
+        human1.addMyCar(myCar);
+        human1.addMyCar(newCar);
+        System.out.println(human1.getGarage());
+
 
         Human human2 = new Human();
         human2.fName = "Patryk2";
@@ -72,26 +97,7 @@ public class Main {
 
 
 
-        Car myCar = new Car() {
-            @Override
-            public void refuel() {
 
-            }
-        };
-        myCar.setModel("v40");
-        myCar.setProducer("Volvo");
-        myCar.setValue(12000D);
-        human1.addCar(myCar);
-
-        Car newCar = new Car() {
-            @Override
-            public void refuel() {
-
-            }
-        };
-        newCar.setModel("v60");
-        newCar.setProducer("Volvo");
-        newCar.setValue(18000.50D);
 
         boolean equal = newCar.getModel().equals(myCar.getModel()) && newCar.getProducer().equals(myCar.getProducer());
         System.out.println(equal);//porównanie czy są takie same, są false bo mają rozne wartosci w modelu
