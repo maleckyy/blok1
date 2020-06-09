@@ -4,6 +4,8 @@ import com.company.creatures.Human;
 import com.company.creatures.Salleable;
 
 import java.net.URL;
+import java.text.Collator;
+import java.util.Collections;
 import java.util.List;
 
 public class Phone extends Device{
@@ -13,8 +15,11 @@ public class Phone extends Device{
     public static final String appName="twarzksiega";
     public static final String appVersion="2.0";
     public static final String appServerAddress="1000";
-    public List<String> appList;
+    public Application application;
+    public List<Application> applicationsList;
     public URL url;
+    public Human human1;
+
 
 
     public String toString(){
@@ -56,4 +61,31 @@ public class Phone extends Device{
             }
         }
     };
+    public void newAppIns(){
+        if(human1.getCash()>application.getPrice()){
+            applicationsList.add(application);
+            human1.setCash(-application.getPrice());
+        }
+    }
+    public void zainstalowane(Application application1){
+        if(application1.equals(application)){
+            System.out.println("juz zainstaloweane");
+        }else{
+            System.out.println("niezainstalowne");
+        }
+
+    }
+    public void applicationsValue(){
+
+        double aValue;
+        for(int i=0;i<applicationsList.size();i++){
+
+            aValue=+ applicationsList.get(i).getPrice();
+            System.out.println(aValue);
+        }
+    }
+    public void applicationsSortAbfabet(){
+        Collections.sort(applicationsList, Collator.getInstance());
+    }
+
 }
