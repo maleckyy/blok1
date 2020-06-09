@@ -3,6 +3,9 @@ package com.company.devices;
 import com.company.creatures.Human;
 import com.company.creatures.Salleable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Car extends Device {
     private String producer;
     private String model;
@@ -78,5 +81,27 @@ public abstract class Car extends Device {
 
     public abstract void refuel();
 
+    public List<Human> posiadaczePoj;
 
+
+    public List<Human> getPosiadaczePoj() {
+        return posiadaczePoj;
+    }
+
+    public void setPosiadaczePoj(List<Human> posiadaczePoj) {
+        this.posiadaczePoj = posiadaczePoj;
+    }
+
+    public int liczbaTranzakcji(){
+        return posiadaczePoj.size();
+    }
+    public void listaPosiadaczy(Human human1){
+        if(posiadaczePoj.equals(human1)== true){
+            System.out.println("prawda");
+        }else{
+            System.out.println("nieprawda");
+        }
+
+    }
+    
 }

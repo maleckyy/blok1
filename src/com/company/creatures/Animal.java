@@ -58,6 +58,7 @@ public abstract class Animal implements Feedable{
                     System.out.println("mam samochod na sprzedarz");
                    seller.getGarage().remove(0);
                    buyer.getGarage().add(0);
+                   
                     System.out.println("Trakzakcja zakonczoona.");
 
                 }
